@@ -1,6 +1,5 @@
 - name: print user from vars from ini
-  hosts: localhost
-  connection: local
+  hosts: node  
   tasks:
   - name: print the user info
     ansible.builtin.debug:

@@ -1,0 +1,11 @@
+- name: print the content using variables
+  hosts: node
+  tasks:
+  vars:
+    course: DevOps with AWS
+    duration: 120day
+
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: Hi I am learning {{ course }} and duration is {{ duration }}

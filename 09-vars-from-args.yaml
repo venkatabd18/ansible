@@ -1,0 +1,6 @@
+- name: user info arg variables
+  hosts: node
+  tasks:
+  - name: print the user info
+    ansible.builtin.debug:
+      msg: Hi i am {{ NAME }} i am learing {{ COURSE }}

@@ -1,0 +1,12 @@
+- name: print the info using prompt variables
+  hosts: node
+  private: false
+  vars_prompt:
+    - course: course name
+      prompt: pls enter the course name
+    - duration: course duration
+      prompt: Pls enter the duration
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: "learing course is {{ course }} and duration is {{ duration }}"

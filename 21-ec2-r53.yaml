@@ -49,6 +49,15 @@
       overwrite: true
     loop: "{{ ec2_info.results }}"
 
-      
-
-
+  - name: create punlic r53 record
+    amazon.aws.route53:
+      state: "present"
+      zone: "{{ zone }}"
+      record: "{{ zone }}"
+      value: "{{ item.instances[0].public_ip_address }}"
+      type: A 
+      ttl: 1
+      overwrite: true
+      wait: true
+    loop: "{{ ec2_info.results}}"
+    when: item.item == "frontend"

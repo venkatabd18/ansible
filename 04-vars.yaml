@@ -1,0 +1,10 @@
+- name: Print the user info using vars
+  hosts: web
+  vars:
+    COURSE: DevOps with AWS
+    DURATION: 5 months
+    TRINER: Siva Kumar
+  tasks:
+  - name: print tha info
+    ansible.builtin.debug:
+      msg: "Hi I am learing {{ COURSE }} and duration is {{ DURATION }}"

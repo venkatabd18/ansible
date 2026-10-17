@@ -30,3 +30,8 @@
     ansible.builtin.debug:
       msg: "{{ numbers | max }}"
       
+  - name: print the min value
+    vars: 
+      numbers: [ 1,4,3,2,1,4,5,3]
+    ansible.builtin.debug:
+      msg: "{{ numbers | min }}"

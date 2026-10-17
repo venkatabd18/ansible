@@ -1,6 +1,5 @@
 - name: print the user info vars from inv
-  hosts: local
-  connection: local
+  hosts: web
   tasks:
   - name: print the info
     ansible.builtin.debug:

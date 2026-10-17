@@ -12,5 +12,5 @@
     vars:
       COURSE: ansible
       DURATION: 1 week
-      ansible.builtin.debug:
-        msg: I am l learing {{ COURSE }} and duration {{ DURATION }}
+    ansible.builtin.debug:
+      msg: I am l learing {{ COURSE }} and duration {{ DURATION }}

@@ -8,11 +8,11 @@
   tasks:
   - name: print the number
     ansible.builtin.debug:
-      msg: "Entered number is grater than 125"
+      msg: "Entered {{ NUMBER }} is grater than 125"
     when: NUMBER | int > 125
     ignore_errors: true
 
   - name: print number less than 124
     ansible.builtin.debug:
-      msg: "Entered number is less than 124"
+      msg: "Entered {{ NUMBER }} is less than 124"
     when: NUMBER | int < 124

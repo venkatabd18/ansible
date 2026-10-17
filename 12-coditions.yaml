@@ -14,5 +14,5 @@
 
   - name: print number less than 124
     ansible.builtin.debug:
-      msg: "Entered number is less than 125"
+      msg: "Entered number is less than 124"
     when: NUMBER | int < 124

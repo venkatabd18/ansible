@@ -47,7 +47,7 @@
       type: A
       ttl: 1
       overwrite: true
-    loop: "{{ ec2_info.resultes }}"
+    loop: "{{ ec2_info.results }}"
 
       
 

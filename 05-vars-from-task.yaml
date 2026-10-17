@@ -1,0 +1,16 @@
+- name: print user indfo vas from task
+  hosts: local
+  connection: local
+  vars:
+    COURSE: DevOps
+    DURATION: 5 months
+  tasks:
+  - name: print user info
+    ansible.builtin.debug:
+      msg: i am learing {{ COURSE }} and duration {{ DURATION }}
+  - name: print user info from task vars
+    vars:
+      COURSE: ansible
+      DURATION: 1 week
+      ansible.builtin.debug:
+        msg: I am l learing {{ COURSE }} and duration {{ DURATION }}

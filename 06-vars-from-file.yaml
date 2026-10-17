@@ -1,0 +1,9 @@
+- name: print vars from file
+  hosts: local
+  connection: local
+  vars_file:
+    vars.yaml
+  tasks:
+  - name: Print user info
+    ansible.builtin.debug:
+      msg: i am learing {{ COURSE }} and duration is {{ DURATION }}

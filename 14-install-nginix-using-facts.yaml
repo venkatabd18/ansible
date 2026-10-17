@@ -1,6 +1,7 @@
 - name: install nfinix using ansible facts info
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: print the ansible facts
     ansible.builtin.debug:

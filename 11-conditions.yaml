@@ -11,3 +11,9 @@
   - name: print the user info
     ansible.builtin.debug:
       msg: "{{ user_info }}"
+  
+  - name: create expense user
+    ansible.builtin.user:
+      name: expense
+      state: present
+    when: rc != 0 

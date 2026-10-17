@@ -1,0 +1,6 @@
+- name: print the user info using args
+  hosts: web
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: "Hi I am learing {{ COURSE }} and {{ DURATION }}"

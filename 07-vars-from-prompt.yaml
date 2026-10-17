@@ -1,0 +1,14 @@
+- name: print the user info using prompt vars
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: COURSE
+    prompt: pls enter the COURSE name
+    private: false
+  - name: DURATION
+    prompt: Pls enter the DURATION
+    private: false
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: i am learing {{ COURSE }} and duration {{ DURATION }}

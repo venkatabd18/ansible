@@ -26,13 +26,4 @@
       security_group: "{{ sg_id }}"
       region: "{{ region }}"
 
-  - name: terminating ec2 instance
-    amazon.aws.ec2_instance:
-      name: "Linux-server"
-      vpc_subnet_id: "{{ subnet_id }}"
-      instance_type: "t3.micro"
-      image_id: "{{ image_id }}"
-      security_group: "{{ sg_id }}"
-      region: "{{ region }}"
-      state: "terminated"
-
+  

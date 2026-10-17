@@ -3,8 +3,8 @@
   tasks:
   - name: print multiple usernames
     ansible.builtin.debug:
-      msg: " {{ item }} "
-    loops:
+      msg: "Hi {{ item }} "
+    loop:
       - venkat
       - raju
       - bandaru

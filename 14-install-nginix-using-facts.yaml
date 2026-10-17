@@ -1,0 +1,13 @@
+- name: install nfinix using ansible facts info
+  hosts: local
+  connection: local
+  tasks:
+  - name: print the ansible facts
+    ansible.builtin.debug:
+      msg: " {{ ansible_facts }} "
+
+  - neme: install nginx when os is redhat
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"

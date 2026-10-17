@@ -1,0 +1,7 @@
+- name: print the user info vars from inv
+  hosts: local
+  connection: local
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: "hi i learing {{ COURSE }} and duration is {{ DURATION }}" 

@@ -23,3 +23,10 @@
       numbers: [ 1,4,3,2,1,4,5,3]
     ansible.builtin.debug:
       msg: "{{ numbers | unique }}"
+
+  - name: print the max value
+    vars: 
+      numbers: [ 1,4,3,2,1,4,5,3]
+    ansible.builtin.debug:
+      msg: "{{ numbers | max }}"
+      

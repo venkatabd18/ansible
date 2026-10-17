@@ -1,0 +1,19 @@
+- name: printing data types
+  hosts: local
+  connection: local
+  vars:
+    COURSE: DevOps wit AWS
+    DURATION: 5 months
+    topics:
+      - Linux
+      - shell
+      - ansible
+    live: true
+    tools:
+      ci: jenkin
+      cm: ansible
+      cloud: AWS
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: "Hi i am learing {{ COURSE }} and duration {{ DURATION }} and topics {{ topics }} this {{ live }} session and tools are {{ tools }}"

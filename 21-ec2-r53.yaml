@@ -7,6 +7,7 @@
     sg_id: "sg-03891f88ae315b0c9"
     image_id: "ami-0220d79f3f480ecf5"
     region: "us-east-1"
+    zone: venra.online
     instances:
       - mysql
       - backend
@@ -36,3 +37,18 @@
   - name: print the instances info
     ansible.builtin.debug:
       msg: "{{ ec2_info }}"
+
+  - name: create private r53 records
+    amazon.aws.route53:
+      state: "present"
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"
+      value: "{{ item.instances[0].private_ip_address }}"
+      type: A
+      overwrite: true
+      ttl: 1
+    loop: "{{ ec2_info.resultes }}"
+
+      
+
+

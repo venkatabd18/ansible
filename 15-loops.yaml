@@ -5,7 +5,7 @@
     ansible.builtin.debug:
       msg: " {{ item }} "
     loops:
-    - venkat
-    - raju
-    - bandaru
-    - prasa
+      - venkat
+      - raju
+      - bandaru
+      - prasa

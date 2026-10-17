@@ -19,4 +19,5 @@
       instance_type: "t3.micro"
       image_id: "ami-0220d79f3f480ecf5"
       security_group: "sg-03891f88ae315b0c9"
+      region: us-east-1
 

@@ -1,0 +1,7 @@
+- name: demo on filres / functions
+  hosts: local
+  connection: local
+  tasks:
+  - name: print default variable
+    ansible.builtin.debug:
+      msg: "i am learing {{ COURSE | default('ansible')}}"

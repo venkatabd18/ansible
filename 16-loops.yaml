@@ -1,0 +1,13 @@
+- name: install multile packages
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: install nginx mysql and postfix
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - mysql
+      - nginx
+      - postfix

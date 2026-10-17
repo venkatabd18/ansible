@@ -1,0 +1,12 @@
+- name: print the number greater that 125
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: NUMBER 
+    prompt: Pls enetr the number
+    private: false
+  tasks:
+  - name: print the number
+    ansible.builtin.debug:
+      msg: "Entered number is grater than 125"
+    when: NUMBER > 125

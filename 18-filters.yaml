@@ -10,4 +10,4 @@
     vars:
       greeting: "Hello Venkat"         
     ansible.builtin.debug:
-      msg: "{{ greeting | upperg }}"
+      msg: "{{ greeting | upper }}"

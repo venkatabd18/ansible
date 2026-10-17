@@ -1,8 +1,0 @@
-- name: print info using vars in file
-  hosts: node
-  vars_files:
-  - vars.yaml
-  tasks:
-  - name: print the info
-    ansible.builtin.debug:
-      msg: "Hi i am {{ person }} and learning {{ course }} and duration {{ duration }}"

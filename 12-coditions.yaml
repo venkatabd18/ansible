@@ -9,4 +9,4 @@
   - name: print the number
     ansible.builtin.debug:
       msg: "Entered number is grater than 125"
-    when: NUMBER > 125
+    when: NUMBER | int > 125

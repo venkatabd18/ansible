@@ -1,7 +1,7 @@
 - name: Print the user info using vars
   hosts: web
-  vars_file:
-    - vars.yaml    
+  vars_files:
+  - vars.yaml    
   tasks:
   - name: print tha info
     ansible.builtin.debug:

@@ -43,3 +43,11 @@
         duration: 129hrs
     ansible.builtin.debug:
       msg: "{{ COURSE | dict2items }}"
+
+  - name: convert list to map
+    vars:
+      COURSE:
+        {"key": "name", "value": "DevOps with AWS"}
+        {"key": "duration", "value": "129hrs"}
+    ansible.builtin.debug:
+      msg: "{{ COURSE | items2dict }}"

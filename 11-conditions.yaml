@@ -1,0 +1,12 @@
+- name: create expense user when it is not availbe
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: check user exist or not
+    ansible.builtin.command: id expense
+    register: user_info
+
+  - name: print the user info
+    ansible.builtin.debug:
+      msg: {{ user_info }}

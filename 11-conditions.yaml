@@ -16,4 +16,4 @@
     ansible.builtin.user:
       name: expense
       state: present
-    when: rc != 0 
+    when: user_info | rc != 0 

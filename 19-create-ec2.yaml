@@ -3,9 +3,4 @@
   connection: local
   become: yes
   tasks:
-  amazon.aws.ec2_instance:
-    name: "ec2-instance"
-    vpc_subnet_id: "subnet-0e6a100cffe49897b"
-    instance_type: "t3.micro"
-    image_id: "ami-0220d79f3f480ecf5"
-    security_group: "sg-03891f88ae315b0c9"
+  
